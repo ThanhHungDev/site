@@ -66,7 +66,6 @@ class Router
     {
         $methodDictionary = $this->{strtolower($this->request->requestMethod)};
         $formatedRoute    = $this->formatRoute($this->request->requestUri);
-        die($this->request->requestUri);
         $method           = isset($methodDictionary[$formatedRoute])? $methodDictionary[$formatedRoute] : null;
 
         if (is_null($method)) {
